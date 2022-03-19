@@ -1,0 +1,25 @@
+{
+  "name": "desarrollo",
+  "version": "1.0.0",
+  "description": "Servidor creado en nodejs que servira como backend para la app portalGRV",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedoya199712/portalGRV.git"
+  },
+  "author": "Carlos Andres Bedoya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bedoya199712/portalGRV/issues"
+  },
+  "homepage": "https://github.com/bedoya199712/portalGRV#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "path": "^0.12.7"
+  }
+}
