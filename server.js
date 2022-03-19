@@ -11,7 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //api
-
 app.use("/api", (request, response) => {
   response.json([
     {
@@ -29,16 +28,11 @@ app.use("/api", (request, response) => {
   ]);
 });
 
-app.get('/', function(req, res) {
-  res.send('Hola Mundo!');
-});
-
-
 //Carga el frontend
-app.use(express.static(path.join(__dirname, "public","portalGRV")));
+app.use(express.static(path.join(__dirname, "public","portal-grv")));
 
 
 //Servidor
-app.listen(3000, function() {
-  console.log('escuchando en el puerto 3000!');
+app.listen(80, function() {
+  console.log('escuchando en el puerto 80!');
 });
