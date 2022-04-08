@@ -2,10 +2,13 @@ const express = require ('express');
 const app = express();
 const router = express.Router();
 const usuarioController = require ('../controllers/usuarioController');
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-
-router.post('/' , usuarioController.crearUsuario);
-router.post("/loguearUsuario",usuarioController.iniciarSesion);
+router.get("/loguearUsuario",usuarioController.iniciarSesion);
 
 
 module.exports = router;

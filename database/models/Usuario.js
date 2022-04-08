@@ -5,7 +5,7 @@ module.exports = class Usuario extends Model {
         return super.init(
             {   
 
-                nombre: {
+                userr: {
                     type: DataTypes.STRING(1234),
                     allowNull: true,
                 },

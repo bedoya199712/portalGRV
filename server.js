@@ -1,11 +1,14 @@
+
 //Librerias
+
 //Servidor
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+require('dotenv').config(path.resolve(process.cwd(), process.env.NODE_ENV === 'development' ? 'development.env' : '.env'));
 const app = express();
 
-//BD
+
 //Sesiones
 
 
@@ -22,8 +25,11 @@ app.use('/api', require('./routes/usuario'));
 
 
 //Carga el frontend
-app.use(express.static(path.join(__dirname, "public","portal-grv")));
+app.use(express.static(path.join(__dirname, "public","portal-grv"),{index: "index.html"}));
+app.use(function(req,res) {
+  res.sendFile(path.join(__dirname, "public","portal-grv","index.html"));
 
+})
 
 //Servidor
 app.listen(80, function() {
